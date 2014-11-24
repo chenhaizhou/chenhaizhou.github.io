@@ -161,6 +161,7 @@ body .fn-hide {
 header {
 	max-width: 80%;
 	margin:0 auto;
+	overflow:hidden;
 }
 header a {
 	color:#333;
@@ -174,4 +175,21 @@ nav {
 }
 nav li {
 	margin:0 10px;
+	float:left;
+	font-size:1rem;
+}
+nav li  a {
+	color:#666;
+}
+
+section {
+	width:80%;
+	margin:0 auto;
+}
+
+footer {
+	width:80%;
+	margin:0 auto;
+	color:#999;
+	font-size:.8rem;
 }
