@@ -19,7 +19,7 @@ audio,canvas,video {
 }
 /* 要注意表单元素并不继承父级 font 的问题 */
 body,button,input,select,textarea {
-	font:12px/1.5 tahoma,arial,"Hiragino Sans GB",\5b8b\4f53;
+	font:62.5%/1.5 tahoma,arial,"Hiragino Sans GB",\5b8b\4f53;
 }
 input,select,textarea {
 	font-size:100%;
@@ -155,4 +155,23 @@ body .fn-hide {
 /* chrome 下字体过小的问题 */
 .fn-webkit-adjust {
 	-webkit-text-size-adjust: none;
+}
+
+
+header {
+	max-width: 80%;
+	margin:0 auto;
+}
+header a {
+	color:#333;
+}
+.logo {
+	font-size:2rem;
+	float:left;
+}
+nav {
+	float:right;
+}
+nav li {
+	margin:0 10px;
 }
