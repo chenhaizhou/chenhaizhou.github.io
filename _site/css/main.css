@@ -146,19 +146,27 @@ pre {
  * Site header
  */
 .site-header {
-  border-top: 5px solid #424242;
   border-bottom: 1px solid #e8e8e8;
   min-height: 56px;
-  position: relative; }
+  background-color: #fafafa;
+  background-image: linear-gradient(to bottom, #ffffff, #f2f2f2);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+  position: relative;
+  text-shadow: 0 1px 0 #fff;
+  color: #666; }
 
 .site-title {
-  font-size: 26px;
+  font-size: 2.2rem;
   line-height: 56px;
   letter-spacing: -1px;
   margin-bottom: 0;
-  float: left; }
+  float: left;
+  text-decoration: none;
+  font-weight: bold; }
   .site-title, .site-title:visited {
-    color: #424242; }
+    color: #757575; }
+  .site-title:hover {
+    text-decoration: none; }
 
 .site-nav {
   float: right;
@@ -166,7 +174,7 @@ pre {
   .site-nav .menu-icon {
     display: none; }
   .site-nav .page-link {
-    color: #111;
+    color: #777777;
     line-height: 1.5; }
     .site-nav .page-link:not(:first-child) {
       margin-left: 20px; }
@@ -191,7 +199,7 @@ pre {
           width: 18px;
           height: 15px; }
           .site-nav .menu-icon > svg path {
-            fill: #424242; }
+            fill: #757575; }
       .site-nav .trigger {
         clear: both;
         display: none; }
@@ -207,7 +215,7 @@ pre {
  */
 .site-footer {
   border-top: 1px solid #e8e8e8;
-  padding: 30px 0; }
+  padding: 15px 0; }
 
 .footer-heading {
   font-size: 18px;
@@ -217,6 +225,11 @@ pre {
 .social-media-list {
   list-style: none;
   margin-left: 0; }
+  .contact-list > li,
+  .social-media-list > li {
+    float: left;
+    margin-left: 10px;
+    font-size: .8rem; }
 
 .footer-col-wrapper {
   font-size: 15px;
@@ -254,6 +267,12 @@ pre {
     float: none;
     width: -webkit-calc(100% - (30px / 2));
     width: calc(100% - (30px / 2)); } }
+.copy {
+  color: #797979; }
+
+.link {
+  float: right; }
+
 /**
  * Page content
  */
@@ -267,7 +286,11 @@ pre {
   margin-left: 0;
   list-style: none; }
   .post-list > li {
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    border-bottom: 1px solid #efefef;
+    padding-bottom: 20px; }
+    .post-list > li:last-child {
+      border-bottom: 0; }
 
 .post-meta {
   font-size: 14px;
@@ -275,7 +298,57 @@ pre {
 
 .post-link {
   display: block;
-  font-size: 24px; }
+  font-size: 24px;
+  color: #333 !important;
+  font-weight: bold; }
+
+.post-meta {
+  line-height: 30px; }
+  .post-meta i {
+    margin-right: 5px;
+    color: #999; }
+
+.tag {
+  margin-left: 10px;
+  float: right; }
+  .tag i {
+    font-size: 1rem;
+    color: #999; }
+  .tag a {
+    color: #666; }
+
+.tags {
+  overflow: hidden; }
+  .tags li {
+    list-style: none;
+    float: left;
+    margin: 5px 10px;
+    overflow: hidden; }
+    .tags li strong, .tags li span {
+      display: block;
+      height: 25px;
+      line-height: 25px;
+      float: left; }
+    .tags li strong {
+      padding: 0 10px;
+      background-color: #333;
+      color: #ccc;
+      font-weight: normal; }
+    .tags li span {
+      padding: 0 10px;
+      background-color: #999;
+      color: #333; }
+
+.tag-list > li {
+  margin: 20px 0 40px 0;
+  list-style: none; }
+  .tag-list > li .tag-list2 li {
+    margin: 10px 0; }
+    .tag-list > li .tag-list2 li span {
+      color: #999;
+      margin-right: 10px; }
+    .tag-list > li .tag-list2 li a {
+      color: #333; }
 
 /**
  * Posts
@@ -308,6 +381,10 @@ pre {
     @media screen and (max-width: 800px) {
       .post-content h4 {
         font-size: 18px; } }
+
+.pagination .current a {
+  background-color: #333;
+  color: #fff; }
 
 /**
  * Syntax highlighting styles
