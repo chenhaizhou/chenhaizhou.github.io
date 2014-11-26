@@ -5,8 +5,8 @@
     <description></description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 25 Nov 2014 09:58:39 +0000</pubDate>
-    <lastBuildDate>Tue, 25 Nov 2014 09:58:39 +0000</lastBuildDate>
+    <pubDate>Wed, 26 Nov 2014 03:28:25 +0000</pubDate>
+    <lastBuildDate>Wed, 26 Nov 2014 03:28:25 +0000</lastBuildDate>
     <generator>Jekyll v2.5.2</generator>
     
       <item>
@@ -28,6 +28,20 @@
         <category>jekyll</category>
         
         <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>S.H.I.E.L.D.</title>
+        <description>&lt;p&gt;My Cup&lt;/p&gt;
+
+&lt;!--more--&gt;
+&lt;p&gt;&lt;img src=&quot;/images/shield.jpg&quot; alt=&quot;shield&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 26 Nov 2014 00:00:00 +0000</pubDate>
+        <link>http://yourdomain.com/2014/11/26/shield.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/2014/11/26/shield.html</guid>
+        
         
       </item>
     

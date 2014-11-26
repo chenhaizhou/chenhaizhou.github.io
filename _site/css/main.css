@@ -297,7 +297,6 @@ pre {
   color: #828282; }
 
 .post-link {
-  display: block;
   font-size: 24px;
   color: #333 !important;
   font-weight: bold; }
@@ -318,12 +317,15 @@ pre {
     color: #666; }
 
 .tags {
-  overflow: hidden; }
+  overflow: hidden;
+  margin: 0 -10px;
+  margin-bottom: 40px; }
   .tags li {
     list-style: none;
     float: left;
     margin: 5px 10px;
-    overflow: hidden; }
+    overflow: hidden;
+    border-radius: 5px; }
     .tags li strong, .tags li span {
       display: block;
       height: 25px;
@@ -332,23 +334,25 @@ pre {
     .tags li strong {
       padding: 0 10px;
       background-color: #333;
-      color: #ccc;
+      color: #fff;
       font-weight: normal; }
     .tags li span {
       padding: 0 10px;
-      background-color: #999;
+      background-color: #ccc;
       color: #333; }
 
-.tag-list > li {
-  margin: 20px 0 40px 0;
-  list-style: none; }
-  .tag-list > li .tag-list2 li {
-    margin: 10px 0; }
-    .tag-list > li .tag-list2 li span {
-      color: #999;
-      margin-right: 10px; }
-    .tag-list > li .tag-list2 li a {
-      color: #333; }
+.tag-list {
+  margin: 0; }
+  .tag-list > li {
+    margin: 20px 0 40px 0;
+    list-style: none; }
+    .tag-list > li .tag-list2 li {
+      margin: 10px 0; }
+      .tag-list > li .tag-list2 li span {
+        color: #999;
+        margin-right: 10px; }
+      .tag-list > li .tag-list2 li a {
+        color: #333; }
 
 /**
  * Posts

@@ -208,7 +208,7 @@
 }
 
 .post-link {
-    display: block;
+    //display: block;
     font-size: 24px;
     color:#333!important;
     font-weight:bold;
@@ -237,11 +237,14 @@
 }
 .tags {
     overflow:hidden;
+    margin:0 -10px;
+    margin-bottom:40px;
     li {
         list-style: none;
         float:left;
         margin:5px 10px;
         overflow:hidden;
+        border-radius: 5px;
         strong,span {
             display:block;
             height:25px;
@@ -251,19 +254,19 @@
         strong {
             padding:0 10px;
             background-color: #333;
-            color:#ccc;
+            color:#fff;
             font-weight: normal;
         }
         span {
             padding:0 10px;
-            background-color: #999;
+            background-color: #ccc;
             color:#333;
         }
     }
 }
 
 .tag-list {
-    
+    margin:0;
     > li {
         margin:20px 0 40px 0;
         list-style:none;
