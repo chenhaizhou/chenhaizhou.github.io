@@ -117,7 +117,7 @@
     > li {
         float:left;
         margin-left:10px;
-        font-size:.8rem;
+        font-size:1.2rem;
     }
 }
 
@@ -192,7 +192,11 @@
     margin-left: 0;
     padding-left:0;
     list-style: none;
-
+    h2 {
+        margin-top:0;
+        padding-top:0;
+        line-height:1;
+    }
     > li {
         margin-bottom: $spacing-unit;
         border-bottom:1px solid #efefef;
@@ -216,7 +220,7 @@
 }
 
 .post-meta {
-    line-height:30px;
+    //line-height:30px;
     i {
         margin-right:5px;
         color:#999;
@@ -227,19 +231,20 @@
 
 .tag {
     margin-left:10px;
-    float:right;
+    //float:right;
     i {
-        font-size:1rem;
+        font-size:1.2rem;
         color:#999;
     }
     a {
-        color:#666;
+        color:#7e7e7e;
     }
 }
 .tags {
     overflow:hidden;
     margin:0 -10px;
     margin-bottom:40px;
+    padding-left:0;
     li {
         list-style: none;
         float:left;
@@ -268,12 +273,14 @@
 
 .tag-list {
     margin:0;
+    padding-left:0;
     > li {
         margin:20px 0 40px 0;
         list-style:none;
         .tag-list2 {
             li {
                 margin: 10px 0;
+                list-style-type: disc;
                 span {
                     color:#999;
                     margin-right:10px;
@@ -333,6 +340,24 @@
 }
 
 .pagination {
+    li {
+        a {
+            color:#333;
+            &:hover {
+                color:#333;
+            }
+        }
+    }
+    .disabled {
+        color:#ccc;
+        cursor:default;
+        a {
+            color:#ccc;
+            &:hover {
+                color:#ccc;
+            }
+        }
+    }
     .current {
         a {
             background-color: #333;
@@ -340,4 +365,8 @@
         }
     }
 
+}
+
+.info-date,.info-tag {
+    margin-right:10px;
 }

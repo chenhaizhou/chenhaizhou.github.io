@@ -4,12 +4,12 @@ title: About
 permalink: /about/
 ---
 
-Name: Haizhou Chen
+**Name:** Haizhou Chen
 
-Live: Shaanxi Xi'an
+**Live:** Shaanxi Xi'an
 
-Work: ThoughtWorks
+**Work:** ThoughtWorks
 
-Job: UI Developer
+**Job:** UI Developer
 
-Homepage: [www.c-hz.cn](http://www.c-hz.cn/)
+**Homepage:** [www.c-hz.cn](http://www.c-hz.cn/)
