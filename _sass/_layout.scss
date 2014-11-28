@@ -48,6 +48,10 @@
         &:not(:first-child) {
             margin-left: 20px;
         }
+        margin-left:20px\0;
+        &:first-child {
+            margin-left:0;
+        }
     }
 
     @include media-query($on-palm) {
