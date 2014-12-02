@@ -178,6 +178,17 @@
  */
 .page-content {
     padding: $spacing-unit 0;
+    table {
+        width:100%;
+        border:1px solid #efefef;
+        th {
+            font-weight:bold;
+        }
+        th,td {
+            border:1px solid #efefef;
+            padding:5px 10px;
+        }
+    }
 }
 
 .page-heading {
@@ -273,6 +284,14 @@
     > li {
         margin:20px 0 40px 0;
         list-style:none;
+        h3 {
+            i {
+                font-size:1.6rem;
+                color:#ccc;
+                margin-right:5px;
+                //vertical-align: middle;
+            }
+        }
         .tag-list2 {
             li {
                 margin: 10px 0;

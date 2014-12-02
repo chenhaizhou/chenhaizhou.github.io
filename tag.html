@@ -11,7 +11,8 @@ layout: default
 	{% for tag in site.tags %}
 
 	<li>
-		<h3 name="{{ tag[0] }}">{{ tag[0] }}</h3>
+		<a name="{{ tag[0] }}"></a>
+		<h3><i class="glyphicon glyphicon-tag"></i>{{ tag[0] }}</h3>
 		<ul class="tag-list2">
 		{% for list in tag[1] %}
 
