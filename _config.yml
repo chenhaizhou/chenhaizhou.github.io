@@ -12,16 +12,6 @@ markdown: kramdown
 paginate: 5
 tags_path : /tags.html
 timezone: China/Beijing
-comments :
-provider : disqus
-disqus :
-short_name : haizhouchen
-livefyre :
-site_id : 123
-intensedebate :
-account : 123abc
-facebook :
-appid : 123
-num_posts: 5
-width: 580
-colorscheme: light
+
+enable_disqus: true
+disqus_shortname: chenhaizhou
