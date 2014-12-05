@@ -11,7 +11,7 @@ layout: default
 </span> 
         <span class="info-tag">
           <i class="glyphicon glyphicon-tag"></i>
-          {% for tag in page.tags %}<a href="{{ BASE_PATH }}{{ site.tags_path }}#{{ tag }}-ref">{{ tag }}</a>{% if forloop.last %}{% else %}, {% endif %}{% endfor %}
+          {% for tag in page.tags %}<a href="{{ BASE_PATH }}{{ site.tags_path }}#{{ tag }}">{{ tag }}</a>{% if forloop.last %}{% else %}, {% endif %}{% endfor %}
         </span>
         {% endif %}
     </p>
