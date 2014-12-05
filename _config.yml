@@ -6,7 +6,7 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://blog.c-hz.cn" # the base hostname & protocol for your site
 twitter_username: chenhaizhou
 github_username:  chenhaizhou
-
+pygments: true
 # Build settings
 markdown: kramdown
 paginate: 5
