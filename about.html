@@ -1,0 +1,51 @@
+---
+layout: default
+---
+
+<div class="about">
+	<div class="face">
+		<img src="images/me.jpg" alt="">
+	</div>
+	<dl class="info">
+		<dt>Name:</dt>
+		<dd>Haizhou Chen</dd>
+		<dt>Live:</dt>
+		<dd class="live">Shaanxi Xi’an
+			<div class="m-box">
+				<div id="googleMap" class="map" style="width:920px;height:280px;"></div>
+			</div>
+			
+		</dd>
+		<dt>Work:</dt>
+		<dd><span class="x">Thought</span><strong class="c">Works</strong></dd>
+		<dt>Job:</dt>
+		<dd>UI Developer</dd>
+		<dt>Homepage:</dt>
+		<dd>www.c-hz.cn</dd>
+	</dl>
+</div>
+
+<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false"></script>
+
+<script>
+var myCenter=new google.maps.LatLng(34.215493, 108.83194);
+
+function initialize()
+{
+var mapProp = {
+  center:myCenter,
+  zoom:12,
+  mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var marker=new google.maps.Marker({
+  position:myCenter,
+  });
+
+marker.setMap(map);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>

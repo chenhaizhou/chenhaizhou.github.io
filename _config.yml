@@ -13,7 +13,7 @@ pygments: true
 # Build settings
 markdown: kramdown
 paginate: 5
-tags_path : /tags.html
+tags_path : /tag.html
 timezone: China/Beijing
 
 enable_disqus: true

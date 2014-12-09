@@ -451,3 +451,86 @@ h3 {
 .info-date,.info-tag {
     margin-right:10px;
 }
+
+.about {
+    position:relative;
+    text-align: center;
+    .face {
+        margin:20px 0;
+        img {
+            max-width:100px;
+            border-radius: 50%;
+            padding:10px;
+            box-shadow: 0 0 10px #f8f8f8;
+                -moz-transition: -moz-transform 0.3s ease;
+                -o-transition: -o-transform 0.3s ease;
+                -webkit-transition: -webkit-transform 0.3s ease;
+                transition: transform 0.3s ease;
+            &:hover {
+                -moz-transform: scale(1.1);
+                -ms-transform: scale(1.1);
+                -webkit-transform: scale(1.1);
+                transform: scale(1.1);
+            }
+        }
+    }
+    .info {
+        text-align: center;
+        dt {
+            color:#999;
+            font-weight:bold;
+            font-size:1.2rem;
+            margin:20px 0 10px 0;
+            font-family: abel;
+        }
+        dd {
+            margin:0;
+            font-size:1.6rem;
+            color:#333;
+            margin-bottom:40px;
+        }
+        .x {
+            font-family: "open sans";
+            color:#333;
+        }
+        .c {
+            font-weight:bold;
+            color:#000;
+        }
+    }
+}
+.m-box {
+    height:0px;
+    overflow:hidden;
+    background-color: #f8f8f8;
+}
+.map {
+    width:100%;
+    //display: none;
+    opacity: 0;
+    //position:absolute;
+    //top:100px;
+    //left:50%;
+    //margin-left:100px;
+    //border:1px solid #ccc;
+    margin:0 auto;
+    img {
+        max-width:none;
+    }
+}
+
+.live {
+    -moz-transition: height 0.3s ease;
+    -o-transition: height 0.3s ease;
+    -webkit-transition: height 0.3s ease;
+    transition: height 0.3s ease;
+}
+.live:hover {
+    .map {
+        display:block;
+        opacity: 1;
+    }
+    .m-box {
+        height:280px;
+    }
+}
