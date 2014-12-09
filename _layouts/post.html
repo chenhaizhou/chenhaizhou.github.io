@@ -6,11 +6,11 @@ layout: default
   <header class="post-header">
     <h1 class="post-title">{{ page.title }}</h1>
     <p class="post-meta">
-    	<span class="info-date"><i class="glyphicon glyphicon-time"></i>{{ page.date | date: "%b %-d, %Y" }}
+    	<span class="info-date"><i class="icon icon-clock"></i>{{ page.date | date: "%b %-d, %Y" }}
 {% if page.tags.size > 0 %}
 </span> 
         <span class="info-tag">
-          <i class="glyphicon glyphicon-tag"></i>
+          <i class="icon icon-tag"></i>
           {% for tag in page.tags %}<a href="{{ BASE_PATH }}{{ site.tags_path }}#{{ tag }}">{{ tag }}</a>{% if forloop.last %}{% else %}, {% endif %}{% endfor %}
         </span>
         {% endif %}

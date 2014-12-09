@@ -15,20 +15,24 @@
 }
 
 .site-title {
-    font-size: 2.2rem;
+    font-size: 1.6rem;
     line-height: 56px;
     letter-spacing: -1px;
     margin-bottom: 0;
     float: left;
     text-decoration: none;
     font-weight: bold;
-
+    font-family: "open sans";
     &,
     &:visited {
         color: $grey-color-dark;
     }
     &:hover {
         text-decoration: none;
+    }
+    strong {
+        font-family: sans-serif;
+        color:#333;
     }
 }
 
@@ -43,7 +47,7 @@
     .page-link {
         color: lighten($text-color, 40%);
         line-height: $base-line-height;
-
+        font-size:1.2rem;
         // Gaps between nav items, but not on the first one
         &:not(:first-child) {
             margin-left: 20px;
@@ -72,6 +76,9 @@
             padding-top: 5px;
             text-align: center;
             color:#666;
+            font-size:1.4rem;
+            text-decoration: none;
+            font-weight:bold;
         }
 
         .trigger {
@@ -98,7 +105,38 @@
  */
 .site-footer {
     border-top: 1px solid $grey-color-light;
-    padding: $spacing-unit / 2 0;
+    //padding: $spacing-unit / 2 0;
+    background-color:#f8f8f8;
+    .copy {
+        color: #797979;
+        margin-top:25px;
+        strong {
+            //color:#333;
+        }
+    }
+    .link {
+        float: right;
+        li {
+
+        }
+        a:hover {
+            text-decoration: none;
+            .icon {
+                color:$brand-color;
+            }
+        }
+        .icon {
+            display:inline-block;
+            width:30px;
+            height:30px;
+            line-height:30px;
+            text-align: center;
+            border-radius: 50%;
+            //background-color: #333;
+            font-size:1.2rem;
+            color:#999;
+        }
+    }
 }
 
 .footer-heading {
@@ -166,12 +204,7 @@
     }
 }
 
-.copy {
-    color: #797979;
-}
-.link {
-    float: right;
-}
+
 
 /**
  * Page content
@@ -200,9 +233,13 @@
     padding-left:0;
     list-style: none;
     h2 {
-        margin-top:0;
+        margin-top:5px;
+        margin-bottom:10px;
         padding-top:0;
         line-height:1;
+        a {
+            color:#333;
+        }
     }
     > li {
         margin-bottom: $spacing-unit;
@@ -212,6 +249,22 @@
             border-bottom:0;
         }
     }
+    .digest {
+        line-height:1.5;
+        font-size:.8rem;
+        p {
+            margin:0 0 10px;
+        }
+    }
+    .icon {
+        font-size:.8rem;
+    }
+    .tag {
+        font-size:.8rem;
+    }
+    .more {
+        font-size:1rem;
+    }
 }
 
 .post-meta {
@@ -219,12 +272,19 @@
     color: $grey-color;
 }
 
-.post-link {
+h2 {
     //display: block;
-    font-size: 24px;
+    font-size: 1.8rem;
     color:#333!important;
     font-weight:bold;
 }
+h3 {
+    //display: block;
+    font-size: 1.6rem;
+    color:#333!important;
+    font-weight:bold;
+}
+
 
 .post-meta {
     //line-height:30px;
@@ -239,6 +299,7 @@
 .tag {
     margin-left:10px;
     //float:right;
+    font-size:1rem;
     i {
         font-size:1.2rem;
         color:#999;
@@ -252,6 +313,7 @@
     margin:0 -10px;
     margin-bottom:40px;
     padding-left:0;
+    font-size:.8rem;
     li {
         list-style: none;
         float:left;
@@ -281,12 +343,13 @@
 .tag-list {
     margin:0;
     padding-left:0;
+    font-size:1rem;
     > li {
         margin:20px 0 40px 0;
         list-style:none;
         h3 {
             i {
-                font-size:1.6rem;
+                font-size:1.2rem;
                 color:#ccc;
                 margin-right:5px;
                 //vertical-align: middle;
@@ -328,7 +391,7 @@
 
 .post-content {
     margin-bottom: $spacing-unit;
-
+    font-size:1rem;
     h2 {
         font-size: 32px;
 
@@ -351,6 +414,9 @@
         @include media-query($on-laptop) {
             font-size: 18px;
         }
+    }
+    p {
+        font-size:1rem;
     }
 }
 
