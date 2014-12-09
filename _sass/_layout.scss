@@ -22,7 +22,7 @@
     float: left;
     text-decoration: none;
     font-weight: bold;
-    font-family: "open sans";
+    font-family: "open sans",sans-serif;
     &,
     &:visited {
         color: $grey-color-dark;
@@ -480,7 +480,10 @@ h3 {
             font-weight:bold;
             font-size:1.2rem;
             margin:20px 0 10px 0;
-            font-family: abel;
+            font-family: abel,sans-serif;
+            .icon {
+                font-size:1.6rem;
+            }
         }
         dd {
             margin:0;
@@ -489,7 +492,7 @@ h3 {
             margin-bottom:40px;
         }
         .x {
-            font-family: "open sans";
+            font-family: "open sans",sans-serif;
             color:#333;
         }
         .c {
@@ -501,10 +504,33 @@ h3 {
 .m-box {
     height:0px;
     overflow:hidden;
-    background-color: #f8f8f8;
+    position: relative;
+    .reset-location {
+        width:30px;
+        height:30px;
+        text-align: center;
+        line-height: 30px;
+        position: absolute;
+        z-index:2;
+        right:20px;
+        top:20px;
+        background-color: #fff;
+        border-radius: 3px;
+        border:1px solid #efefef;
+        color:#666;
+        cursor: pointer;
+        &:hover {
+            color:$brand-color;
+        }
+        .icon {
+            font-size:1rem;
+        }
+    }
 }
 .map {
+    border-radius: 10px;
     width:100%;
+    height:280px;
     //display: none;
     opacity: 0;
     //position:absolute;
@@ -513,8 +539,12 @@ h3 {
     //margin-left:100px;
     //border:1px solid #ccc;
     margin:0 auto;
+    z-index:1;
     img {
         max-width:none;
+    }
+    .anchorBL, .BMap_cpyCtrl {
+        display: none;
     }
 }
 

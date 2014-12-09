@@ -7,45 +7,45 @@ layout: default
 		<img src="images/me.jpg" alt="">
 	</div>
 	<dl class="info">
-		<dt>Name:</dt>
+		<dt><i class="icon icon-user"></i></dt>
 		<dd>Haizhou Chen</dd>
-		<dt>Live:</dt>
+		<dt><i class="icon icon-location"></i></dt>
 		<dd class="live">Shaanxi Xi’an
 			<div class="m-box">
-				<div id="googleMap" class="map" style="width:920px;height:280px;"></div>
+				<div id="resetLocation" class="reset-location"><i class="icon icon-target"></i></div>
+				<div id="googleMap" class="map"></div>
 			</div>
 			
 		</dd>
-		<dt>Work:</dt>
+		<dt><i class="icon icon-vcard"></i></dt>
 		<dd><span class="x">Thought</span><strong class="c">Works</strong></dd>
-		<dt>Job:</dt>
+		<dt><i class="icon icon-wrench"></i></dt>
 		<dd>UI Developer</dd>
-		<dt>Homepage:</dt>
+		<dt><i class="icon icon-envelope-o"></i></dt>
+		<dd>higocn@163.com</dd>
+		<dt><i class="icon icon-chain"></i></dt>
 		<dd>www.c-hz.cn</dd>
 	</dl>
 </div>
 
-<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false"></script>
+<script src="http://api.map.baidu.com/api?v=2.0&ak=C9izjG6ZkrBqjBlbm8GroiEZ"></script>
 
 <script>
-var myCenter=new google.maps.LatLng(34.215493, 108.83194);
+//var myCenter=new google.maps.LatLng(34.215493, 108.83194);
 
-function initialize()
-{
-var mapProp = {
-  center:myCenter,
-  zoom:12,
-  mapTypeId:google.maps.MapTypeId.ROADMAP
-  };
+// 百度地图API功能
+	var map = new BMap.Map("googleMap");    // 创建Map实例
+	map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
 
-var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+	var point = new BMap.Point(108.83734, 34.220023);
+	map.centerAndZoom(point, 15);
+	var top_left_navigation = new BMap.NavigationControl();  
+	var marker = new BMap.Marker(point);  // 创建标注
+	map.addOverlay(marker);               // 将标注添加到地图中
+	marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+	map.addControl(top_left_navigation); 
 
-var marker=new google.maps.Marker({
-  position:myCenter,
-  });
-
-marker.setMap(map);
-}
-
-google.maps.event.addDomListener(window, 'load', initialize);
+	document.getElementById('resetLocation').onclick = function(){
+		map.centerAndZoom(point, 15);
+	}
 </script>
