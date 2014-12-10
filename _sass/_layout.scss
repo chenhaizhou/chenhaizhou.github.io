@@ -21,7 +21,7 @@
     margin-bottom: 0;
     float: left;
     text-decoration: none;
-    font-weight: bold;
+    
     font-family: "open sans",sans-serif;
     &,
     &:visited {
@@ -33,6 +33,7 @@
     strong {
         font-family: sans-serif;
         color:#333;
+        font-weight: bold;
     }
 }
 
@@ -232,6 +233,7 @@
             padding:5px 10px;
         }
     }
+    //font-family: 微软雅黑;
 }
 
 .page-heading {
