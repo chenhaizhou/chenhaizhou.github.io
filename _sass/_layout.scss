@@ -404,6 +404,7 @@ h3 {
 .post-content {
     margin-bottom: $spacing-unit;
     font-size:1rem;
+    line-height:1.5;
     h2 {
         font-size: 32px;
 
@@ -430,6 +431,34 @@ h3 {
     p {
         font-size:1rem;
         line-height:1.5;
+    }
+}
+
+.post-footer {
+    margin:20px 0;
+    border-top:1px dashed #efefef;
+    padding:10px 0;
+    line-height:1.5rem;
+    font-size:1rem;
+    overflow:hidden;
+    a {
+        text-decoration: underline;
+    }
+    .prev {
+        float:left;
+        &::before {
+            content:"<<";
+            margin-right:5px;
+            color:#999;
+        }
+    }
+    .next {
+        float:right;
+        &::after {
+            content:">>";
+            margin-left:5px;
+            color:#999;
+        }
     }
 }
 

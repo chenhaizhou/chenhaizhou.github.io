@@ -20,6 +20,10 @@ layout: default
   <article class="post-content">
     {{ content }}
   </article>
+  <footer class="post-footer">
+    {% if page.previous %}<span class="prev"><a href="{{ page.previous.url }}">{{ page.previous.title }}</a></span>{% endif %}
+    {% if page.next %}<span class="next"><a href="{{ page.next.url }}">{{ page.next.title }}</a></span>{% endif %}
+  </footer>
 {% if site.enable_disqus %}
  <div id="disqus_thread"></div>
     <script type="text/javascript">

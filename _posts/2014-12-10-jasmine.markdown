@@ -13,7 +13,8 @@ tags:
 
 ###Suites
 
-```describe (string, function)``` 一个测试组开始于全局函数describe，一个describe是一个it的集合。describe包含n个it，一个it包含n个判断断言。string：测试组名称，function：测试组函数。An expectation in Jasmine is an assertion that is either true or false. If you name them well, your specs read as full sentences in traditional BDD style.
+
+```describe (string, function)```一个测试组开始于全局函数describe，一个describe是一个it的集合。describe包含n个it，一个it包含n个判断断言。string：测试组名称，function：测试组函数。An expectation in Jasmine is an assertion that is either true or false. If you name them well, your specs read as full sentences in traditional BDD style.
 
 ###Specs
 
@@ -67,6 +68,7 @@ describe("A suite is just a function", function() {
 - **toBeGreaterThan** 数值比较，大于
 - **toBeCloseTo** 数值比较时定义精度，先四舍五入后再比较
 - **toThrow** 检验一个函数是否会抛出一个错误
+
 你也可以通过 custom_matcher.js 来自定义Matcher。
 
 ###使用方法：
@@ -140,7 +142,7 @@ describe("A spec (with setup and tear-down)", function() {
 
 describe是可以嵌套的，并且specs可以定义在任何一层的describe中，jasmine允许用树状的方法来组成一个suite。在一个spec执行之前，jasmine从树的根节点依次执行（先序遍历）各个beforeEach,spec执行之后再以同样的方式执行afterEach（后序遍历）。
 
-Demo请参考Nesting describe Blocks.
+Demo请参考 [Nesting describe Blocks](http://jasmine.github.io/2.0/introduction.html#section-Nesting_&lt;code&gt;describe&lt;/code&gt;_Blocks).
 
 ###禁用Suites
 
@@ -220,7 +222,7 @@ describe("A spy", function() {
 
 ###Spies: and.callThrough
 
-如果spi调用and.callThrough，那么spi除了跟踪所有的函数调用外，还会受实际实现的影响，即spi返回的值就是实际的值。
+如果spi调用```and.callThrough```，那么spi除了跟踪所有的函数调用外，还会受实际实现的影响，即spi返回的值就是实际的值。
 
 {% highlight js %}
 spyOn(foo, 'getBar').and.callThrough();
@@ -239,7 +241,7 @@ it("when called returns the requested value", function() {
 
 ###Spies: and.returnValue
 
-如果spi调用and.returnValue，那么该spi返回的值为在and.returnValue中返回的值。
+如果spi调用```and.returnValue```，那么该spi返回的值为在```and.returnValue```中返回的值。
 
 {% highlight js %}
 spyOn(foo, "getBar").and.returnValue(745);
@@ -259,7 +261,7 @@ it("when called returns the requested value", function() {
 
 ###Spies: and.callFake
 
-和and.returnValue类似，只不过是用function的形式指定spi的返回值。
+和```and.returnValue```类似，只不过是用function的形式指定spi的返回值。
 
 {% highlight js %}
 spyOn(foo, "getBar").and.callFake(function() {
@@ -277,7 +279,7 @@ it("when called returns the requested value", function() {
 
 ###Spies: and.throwError
 
-使用and.throwError来指定spi返回的异常。
+使用```and.throwError```来指定spi返回的异常。
 
 {% highlight js %}
 spyOn(foo, "setBar").and.throwError("quux");
@@ -290,7 +292,7 @@ it("throws the value", function() {
 
 ###Spies: and.stub
 
-在调用and.callThrough后，如果你想阻止spi继续对实际值产生影响，你可以调用and.stub。也就是说，and.stub是将spi对实际实现的影响还原到最终的状态——不影响实际值。
+在调用```and.callThrough```后，如果你想阻止spi继续对实际值产生影响，你可以调用```and.stub```。也就是说，```and.stub```是将spi对实际实现的影响还原到最终的状态——不影响实际值。
 
 {% highlight js %}
 spyOn(foo, 'setBar').and.callThrough();
@@ -352,7 +354,7 @@ expect(foo.setBar.calls.any()).toBe(false);
 
 ###Spies: createSpy
 
-使用jasmine.createSpy来创建一个虚拟spi，除了没有任何实现，具有其他spi相同的功能。
+使用```jasmine.createSpy```来创建一个虚拟spi，除了没有任何实现，具有其他spi相同的功能。
 
 {% highlight js %}
 var whatAmI = jasmine.createSpy('whatAmI');
@@ -375,7 +377,7 @@ expect(tape.play).toHaveBeenCalled();
 
 ###jasmine.any
 
-jasmine.any的参数为一个构造函数或者“类”名，用于匹配所有构造函数为jasmine.any传入的构造函数的对象。
+```jasmine.any```的参数为一个构造函数或者“类”名，用于匹配所有构造函数为jasmine.any传入的构造函数的对象。
 
 {% highlight js %}
 expect({}).toEqual(jasmine.any(Object));
@@ -385,7 +387,7 @@ expect(foo).toHaveBeenCalledWith(jasmine.any(Number), jasmine.any(Function));
 
 ###jasmine.objectContaining
 
-jasmine.objectContaining接收一个Object类型的参数，用于匹配所有包含传入对象的所有对象。
+```jasmine.objectContaining```接收一个Object类型的参数，用于匹配所有包含传入对象的所有对象。
 
 {% highlight js %}
 var foo = {
@@ -429,7 +431,7 @@ afterEach(function() {
 
 ####计时：
 
-使用jasmine.clock().tick来计时，一旦累计的时间达到setTimeout或者setInterval中指定的延时时间，则触发回调函数。
+使用```jasmine.clock().tick```来计时，一旦累计的时间达到setTimeout或者setInterval中指定的延时时间，则触发回调函数。
 
 {% highlight js %}
 it("causes an interval to be called synchronously", function() {
