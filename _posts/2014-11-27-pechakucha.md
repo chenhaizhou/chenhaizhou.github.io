@@ -5,10 +5,12 @@ tags:
   - English
 ---
 
+新公司对英文要求甚高。“My English is poor.”。或许对于我这种四级都不具备的只能说不具备该技能。组里该技能值高的同事提出了这么个帮助我们的方法。感觉蛮新颖的，就先记录下来。
+
+<!--more-->
+
 ###Pecha Kucha是什么意思？
    **What is PechaKucha？**
-
- <!--more-->
 
    Pecha Kucha是日文，意指喋喋不休的闲聊。
 
