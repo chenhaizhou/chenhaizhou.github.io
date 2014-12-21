@@ -9,7 +9,7 @@ layout: default
   <ul class="post-list">
     {% for post in paginator.posts %}
       <li>
-        <span class="post-meta"><i class="icon icon-clock"></i>{{ post.date | date: "%b %d, %Y" }}</span>
+        <span class="post-meta"><i class="icon icon-calendar"></i>{{ post.date | date: "%b %d, %Y" }}</span>
         {% if post.tags.size > 0 %}
         <span class="tag">
           <i class="icon icon-tag"></i>
