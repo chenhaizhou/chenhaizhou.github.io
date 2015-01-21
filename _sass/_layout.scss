@@ -634,3 +634,47 @@ h3 {
         height:280px;
     }
 }
+
+.arc-list, .y-list, .m-list {
+    list-style: none;
+}
+.y-list {
+    margin-bottom:40px;
+    position:relative;
+    padding-left:100px;
+    border-top:1px solid #efefef;
+    padding-top:20px;
+    margin-top:20px;
+    &:first-child {
+        padding-top:0;
+        border:0;
+        h2 {
+            top:-5px;
+        }
+    }
+    h2 {
+        margin:0;
+        position: absolute;
+        left:0;
+        top:30px;
+        font-family: "open sans",Tahoma,Helvetica,Arial,微软雅黑,sans-serif;
+        font-weight: normal;
+    }
+}
+.m-list {
+    margin-bottom:40px;
+    position: relative;
+    padding-left:80px;
+    h3 {
+        margin:0;
+        position: absolute;
+        left:0;
+        top:-5px;
+        color: #999!important;
+        font-family: "open sans",Tahoma,Helvetica,Arial,微软雅黑,sans-serif;
+        font-weight: normal;
+    }
+    .tag-list2 {
+        li {margin-top:5px;}
+    }
+}
