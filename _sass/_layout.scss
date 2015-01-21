@@ -638,10 +638,18 @@ h3 {
 .arc-list, .y-list, .m-list {
     list-style: none;
 }
+.arc-list {
+    margin:0;
+    padding:0;
+}
+
 .y-list {
     margin-bottom:40px;
     position:relative;
-    padding-left:100px;
+    padding-left:20%;
+    @include media-query($on-palm) {
+        padding-left:8%;
+    }
     border-top:1px solid #efefef;
     padding-top:20px;
     margin-top:20px;
@@ -664,7 +672,7 @@ h3 {
 .m-list {
     margin-bottom:40px;
     position: relative;
-    padding-left:80px;
+    padding-left:8%;
     h3 {
         margin:0;
         position: absolute;
