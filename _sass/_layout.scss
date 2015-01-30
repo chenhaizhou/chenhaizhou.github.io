@@ -705,3 +705,12 @@ h3 {
         }
     }
 }
+
+@include media-query($on-palm) {
+    .pagination li {
+        display: none;
+        &.prev,&.next {
+            display:inline;
+        }
+    }
+}
