@@ -9,7 +9,7 @@ layout: default
 	{% capture next_month %}{{ post.previous.date | date: "%b" }}{% endcapture %}
 	{% if forloop.first %}
 	<li class="y-list">
-		<h2>{{this_year}}</h2>
+		<h2><i class="icon icon-calendar"></i>{{this_year}}</h2>
 		<ul class="tag-list">
 			<li class="m-list">
 				<h3>{{this_month}}</h3>
@@ -28,7 +28,7 @@ layout: default
 		</ul>
 	</li>
 	<li class="y-list">
-		<h2>{{next_year}}</h2>
+		<h2><i class="icon icon-calendar"></i>{{next_year}}</h2>
 		<ul class="tag-list">
 			<li class="m-list">
 				<h3>{{next_month}}</h3>

@@ -661,7 +661,7 @@ h3 {
         padding-top:0;
         border:0;
         h2 {
-            top:-5px;
+            top:-3px;
         }
     }
     h2 {
@@ -671,12 +671,21 @@ h3 {
         top:30px;
         font-family: "open sans",Tahoma,Helvetica,Arial,微软雅黑,sans-serif;
         font-weight: normal;
+        line-height: 1;
+    }
+    .icon-calendar {
+        margin-right:10px;
+        display:inline-block;
+        color:#999;
+        font-size:.6em;
+        vertical-align: middle;
+        margin-top:-5px;
     }
 }
 .m-list {
     margin-bottom:40px;
     position: relative;
-    padding-left:8%;
+    padding-left:10%;
     h3 {
         margin:0;
         position: absolute;
