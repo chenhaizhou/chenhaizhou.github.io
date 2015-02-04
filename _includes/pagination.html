@@ -2,12 +2,12 @@
 	<ul class="pagination">
 		{% if paginator.previous_page %}
 		<li class="prev">
-			{% if paginator.previous_page == 1 %}<a href="/">&larr; Previous</a>
-			{% else %}<a href="/page{{ paginator.previous_page }}">&larr; Previous</a>
+			{% if paginator.previous_page == 1 %}<a href="/" class="icon icon-chevron-left"></a>
+			{% else %}<a href="/page{{ paginator.previous_page }}" class="icon icon-chevron-left"></a>
 			{% endif %}
 		</li>
 		{% else %}
-		<li class="prev disabled"><a>&larr; Previous</a></li>
+		<li class="prev disabled"><a class="icon icon-chevron-left"></a></li>
 		{% endif %}
 		{% if paginator.total_pages >= 2 %}
 		{% if paginator.page == 1 %}<li class="disabled"><a>1</a></li>
@@ -20,9 +20,9 @@
 		{% endfor %}
 		{% endif %}
 		{% if paginator.next_page %}
-		<li class="next"><a href="/page{{ paginator.next_page }}">Next &rarr;</a></li>
+		<li class="next"><a href="/page{{ paginator.next_page }}" class="icon icon-chevron-right"></a></li>
 		{% else %}
-		<li class="next disabled"><a>Next &rarr;</a></li>
+		<li class="next disabled"><a class="icon icon-chevron-left"></a></li>
 		{% endif %}
 	</ul>
 	{% endif %}
