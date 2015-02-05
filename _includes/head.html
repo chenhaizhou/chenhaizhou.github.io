@@ -22,17 +22,18 @@ var _hmt = _hmt || [];
 })();
 </script>
 <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-<script src="/js/jQuery.Hz2Py-min.js"></script>
 <script src="/js/jquery.simpleWeather.min.js"></script>
-<script src="http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js"></script>
 <script>
   $(document).ready(function() {
 
-    //$.get('http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js',function(data){
-      var h = $('<input id="local" value="'+ remote_ip_info.city +'" />');
-      var local = h.toPinyin();
+    //$.get('http://api.hostip.info/get_json.php',function(data){
+      $.get('http://ip-api.com/json',function(data){
+      var local = data.city || data.country;
+      //var h = $('<input id="local" value="'+ remote_ip_info.city +'" />');
+      //var local = h.toPinyin();
+      //console.log(data)
       loadWeather(local,''); //@params location, woeid
-    //});
+    });
     
 });
 
@@ -42,6 +43,7 @@ function loadWeather(location, woeid) {
     woeid: woeid,
     unit: 'c',
     success: function(weather) {
+      console.log(weather)
       html = '<i class="wicon-'+weather.code+'"></i>';
       html += '<span class="ssd">'+weather.city+'&nbsp;<strong>'+weather.temp+'&deg;'+weather.units.temp+'</strong>&nbsp;'+weather.currently+'</span>';
       //html = '<span><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'</span>';
@@ -52,7 +54,8 @@ function loadWeather(location, woeid) {
       $("#weather").html(html);
     },
     error: function(error) {
-      $("#weather").html('<p>'+error+'</p>');
+      //console.log(error)
+      //$("#weather").html('<span>'+message.error+'</span>');
     }
   });
 }
