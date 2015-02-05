@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "美化console.log的文本"
-date:   2014-11-24 17:48:25
+date:   2014-11-18 17:48:25
 tags:
   - Js
 ---
