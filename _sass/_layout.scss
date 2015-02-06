@@ -729,6 +729,22 @@ h3 {
             display:inline;
         }
     }
+    .pagination {
+        width:96%;
+        margin:0 auto;
+        .prev,.next {
+            width:48%;
+            float:left;
+            a,span{
+                display:block;
+                width:100%;
+                text-align: center;
+                //padding-left:40px;
+                //padding-right:40px;
+            }         
+        }
+    }
+
 }
 
 @font-face {
