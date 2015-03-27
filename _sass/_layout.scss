@@ -540,8 +540,9 @@ h3 {
         height:100px;
         margin:20px auto;
         //box-shadow: 0 0 10px #f8f8f8;
-        border-radius: 50%;
+        border-radius: 100px;
         overflow: hidden;
+        position: relative;
         img {
             max-width:100px;
             
