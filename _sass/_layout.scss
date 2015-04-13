@@ -718,7 +718,30 @@ h3 {
     .m-list {
         padding-left:0;
         h3 {
-            position: static;
+            position: relative;
+            background-color: #333;
+            color:#fff!important;
+            border-radius: 50%;
+            width:30px;
+            height:30px;
+            padding:10px;
+            line-height: 30px;
+            text-align: center;
+            font-size:.8rem;
+            margin:0 auto;
+            /*&::before {
+                content: "";
+                display:block;
+                width:0;
+                height:0;
+                border-style: solid;
+                border-color: #333 transparent transparent transparent;
+                border-width: 5px 5px 0;
+                position: absolute;
+                bottom:-3px;
+                left:20px;
+            }
+            */
         }
     }
 }
