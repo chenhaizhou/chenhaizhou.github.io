@@ -484,12 +484,7 @@ h3 {
     a {
         text-decoration: underline;
     }
-    @include media-query($on-palm){
-        span {
-            background-color: $grey-color-light;
-            border-radius: 5px;
-        }
-    }
+
     .prev {
         float:left;
         &::before {
@@ -504,6 +499,24 @@ h3 {
             content:">>";
             margin-left:5px;
             color:#999;
+        }
+    }
+    @include media-query($on-palm){
+        span {
+            display:block;
+            margin:10px 0;
+            background-color: $grey-color-light;
+            border-radius: 5px;
+            padding:5px 10px;
+        }
+        .next,.left {
+            float: none;
+        }
+        .prev::after {
+            content: "Prev:";
+        }
+        .next::after {
+            content: "Next:";
         }
     }
 }
