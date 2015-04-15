@@ -509,14 +509,21 @@ h3 {
             border-radius: 5px;
             padding:5px 10px;
         }
-        .next,.left {
+        .next,.prev {
             float: none;
         }
-        .prev::after {
+        .prev::before {
             content: "Prev:";
         }
-        .next::after {
-            content: "Next:";
+        .next {
+            &::before {
+                content: "Next:";
+                color:#999;
+                margin-right:5px;
+            }
+            &::after {
+                content: "";
+            }
         }
     }
 }
