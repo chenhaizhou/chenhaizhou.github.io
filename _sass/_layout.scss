@@ -572,22 +572,22 @@ h3 {
         height:100px;
         margin:20px auto;
         //box-shadow: 0 0 10px #f8f8f8;
-        border-radius: 100px;
+        border-radius: 50%;
         overflow: hidden;
         position: relative;
+        z-index: 9;
         img {
             max-width:100px;
-            
-            
+            //border-radius: 50%;
                 -moz-transition: -moz-transform 0.3s ease;
                 -o-transition: -o-transform 0.3s ease;
                 -webkit-transition: -webkit-transform 0.3s ease;
                 transition: transform 0.3s ease;
             &:hover {
-                -moz-transform: scale(1.1);
-                -ms-transform: scale(1.1);
-                -webkit-transform: scale(1.1);
-                transform: scale(1.1);
+                -moz-transform: scale(1.05);
+                -ms-transform: scale(1.05);
+                -webkit-transform: scale(1.05);
+                transform: scale(1.05);
             }
         }
     }
