@@ -35,7 +35,7 @@ table {
  */
 blockquote {
     color: $grey-color;
-    border-left: 4px solid $grey-color-light;
+    border-left: 4px solid $brand-color;
     padding-left: $spacing-unit / 2;
     font-size: 18px;
     letter-spacing: -1px;
@@ -68,7 +68,9 @@ code {
 pre {
     padding: 15px;
     overflow-x: scroll;
-
+    white-space:pre-wrap;
+    word-wrap: break-word; 
+    word-break: break-all;
     > code {
         border: 0;
         padding-right: 0;

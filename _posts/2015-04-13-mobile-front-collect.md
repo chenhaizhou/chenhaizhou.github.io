@@ -3,6 +3,10 @@ layout: post
 title: 移动Web 开发中的一些前端知识收集
 tags:
  - Web
+ - F2e
+ - Html
+ - Css3
+ - Html5
 ---
 
 要说移动Web 开发与传统的PC 端开发，感觉也没什么不同，但得益于苹果对于智能机的推动，CSS3+HTML5几乎可以毫无顾忌的使用，然后浏览器端考虑webkit内核的就差不多了。

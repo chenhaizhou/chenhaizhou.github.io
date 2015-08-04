@@ -611,11 +611,13 @@ h3 {
             margin-bottom:40px;
         }
         .x {
-            font-family: "open sans",Tahoma,Helvetica,Arial,微软雅黑,sans-serif;
+            font-family: "open sans", "Microsoft YaHei", "Hiragino Sans GB", "Hiragino Sans GB W3", Tahoma,Helvetica,Arial,微软雅黑,sans-serif;
             color:#333;
+            font-weight: 100;
         }
         .c {
-            font-weight:bold;
+            font-family: "open sans", "Microsoft YaHei", "Hiragino Sans GB", "Hiragino Sans GB W3", Tahoma,Helvetica,Arial,微软雅黑,sans-serif;
+            font-weight:700;
             color:#000;
         }
     }

@@ -3,6 +3,7 @@ layout: post
 title: IE年事已高 Spartan才是我们的希望
 tags:
  - Web
+ - F2e
 ---
 
 微软代号为 Spartan 的新浏览器在 Windows 10 发布会中横空出世，彻底抛弃 IE 的这一天可能会来得更早一点。毕竟在 Win 10 的所有版本中，默认的浏览器只有一个，那就是 Spartan 。
