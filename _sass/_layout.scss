@@ -891,7 +891,7 @@ h3 {
     }
     &:hover {
         i {
-            color:#333;
+            //color:#333;
         }
     }
 }
@@ -944,6 +944,19 @@ h3 {
 .wicon-45:before { content: "S"; }
 .wicon-46:before { content: "U"; }
 .wicon-47:before { content: "S"; }
+
+
+#weather {
+    .wicon-11,.wicon-12,.wicon-13,.wicon-14 {
+        color: #448AFF;
+    }
+    .wicon-15,.wicon-16,.wicon-17,.wicon-18 {
+        color: #303F9F;
+    }
+    .wicon-32,.wicon-34,.wicon-36 {
+        color: #FF5252;
+    }
+}
 
 #weather {
   color: #999;
