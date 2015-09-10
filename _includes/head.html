@@ -43,7 +43,6 @@ function loadWeather(location, woeid) {
     woeid: woeid,
     unit: 'c',
     success: function(weather) {
-      console.log(weather)
       html = '<i class="wicon-'+weather.code+'"></i>';
       html += '<span class="ssd">'+weather.city+'&nbsp;<strong>'+weather.temp+'&deg;'+weather.units.temp+'</strong>&nbsp;'+weather.currently+'</span>';
       //html = '<span><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'</span>';

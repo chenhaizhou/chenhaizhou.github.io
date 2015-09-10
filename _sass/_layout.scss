@@ -87,6 +87,7 @@
         .trigger {
             clear: both;
             display: none;
+            transition: all .2s;
         }
 
         &:hover .trigger {
