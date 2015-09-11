@@ -954,6 +954,12 @@ h3 {
     .wicon-15,.wicon-16,.wicon-17,.wicon-18 {
         color: #303F9F;
     }
+    .wicon-26 {
+
+    }
+    .wicon-27,.wicon-28,.wicon-29,.wicon-30,.wicon-31 {
+        color: #ff9900;
+    }
     .wicon-32,.wicon-34,.wicon-36 {
         color: #FF5252;
     }
@@ -968,7 +974,7 @@ h3 {
   float:left;
   display: inline;
   width:auto;
-
+  margin-left:5px;
   .ssd {
     transition: all 1s ease-in;
     //display:none;
