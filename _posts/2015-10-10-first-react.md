@@ -1,7 +1,7 @@
 ---
 title: '初探React，将我们的View标签化'
 layout: post
-tag:
+tags:
  - Web
  - F2e
  - Js
