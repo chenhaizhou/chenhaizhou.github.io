@@ -86,22 +86,40 @@
 
         .trigger {
             clear: both;
-            display: none;
-            transition: all .2s;
+            display: block;
+            height: 0;
+            overflow: hidden;
+            transition: left .2s;
+            position: fixed;
+            top: 45px;
+            left: 100%;
         }
 
-        &:hover .trigger {
-            display: block;
+        &:hover {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            .trigger {
+            //display: block;
+            height: auto;
+            width: 100%;
+            
+            left: 0;
+            right: 0;
+            background-color: inherit;
+            overflow: visible;
             padding-bottom: 5px;
+        }
         }
 
         .page-link {
             display: block;
-            padding: 5px 10px;
+            padding: 5px 20px;
             line-height:40px;
             margin:0!important;
-
-            //border-top:1px solid $grey-color-light;
+            border-top: 1px solid lighten(black, 10%);
+            &:first-child {
+                border-top: 0;
+            }
         }
         .page-link:hover {
             background-color: #666;
