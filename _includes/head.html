@@ -34,7 +34,7 @@ var _hmt = _hmt || [];
       //console.log(data)
       loadWeather(local,''); //@params location, woeid
     });
-    
+    color();
 });
 
 function loadWeather(location, woeid) {
@@ -56,6 +56,20 @@ function loadWeather(location, woeid) {
       //console.log(error)
       //$("#weather").html('<span>'+message.error+'</span>');
     }
+  });
+}
+
+function color(){
+  var color = ['aaa', '999','888','777','666','555','444','333','222','111', '000'],
+  data = [], min, max;
+  $('.tags li').each(function(i){
+    data.push($(this).find('span').text())
+  });
+  min = Math.min.apply(null, data);
+  max = Math.max.apply(null, data);
+  $('.tags li').each(function(i){
+    var r = ((parseInt($(this).find('span').text(), 10) - min) / (max - min)).toFixed(1) * 10;
+    $(this).find('strong').css('background-color', '#' + color[r]);
   });
 }
 </script>
