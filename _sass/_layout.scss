@@ -68,43 +68,44 @@
         text-align: right;
         z-index: 999;
         text-shadow:none;
+        margin:0 -15px;
         .menu-icon {
             display: block;
             position: absolute;
-            top: 9px;
+            top: 3px;
             right: 20px;
-            width: 36px;
-            height: 36px;
-            line-height: 36px;
+            width: 48px;
+            height: 48px;
+            line-height: 48px;
             text-align: center;
             z-index: 2;
-            background-color: $text-color;
+            //background-color: $text-color;
             border-radius: 5px;
             transition: transform .3s;
             i {
                 display: inline-block;
                 width: 60%;
-                height: 2px;
+                height: 3px;
                 vertical-align: middle;
-                background-color: #FFF;
+                background-color: $text-color;
                 position: relative;
                 &::before, &::after {
                     content: "";
                     display: inline-block;
                     width: 100%;
-                    height: 2px;
+                    height: 3px;
                     position: absolute;
                     left: 50%;
                     margin-left: -50%;
                     z-index: 1;
-                    background-color: #FFF;
+                    background-color: $text-color;
                     transition: transform .3s;
                 }
                 &::before {
-                    top: -5px;
+                    top: -7px;
                 }
                 &::after {
-                    bottom: -5px;
+                    bottom: -7px;
                 }
             }
         }
@@ -112,8 +113,11 @@
         &.active {
             .menu-icon {
                 height: 48px;
+                width: 54px;
+                line-height: 48px;
                 border-bottom-left-radius: 0;
                 border-bottom-right-radius: 0;
+                background-color: $text-color;
             }
             i {
                 visibility: hidden;
@@ -121,27 +125,26 @@
                     visibility: visible;
                     transform: rotate3d(0, 0, 1, 45deg);
                     top: 0;
+                    background-color: #FFF;
                 }
                 &::after {
                     visibility: visible;
                     transform: rotate3d(0, 0, 1, -45deg);
                     bottom: 0;
+                    background-color: #FFF;
                 }
             }
             .trigger {
-                height: auto;
-                background-color: inherit;
-                overflow: visible;
-                padding-bottom: 5px;
+                height: 204px;   
+                overflow: visible;        
             }
         }
 
         .trigger {
             clear: both;
             height: 0;
+            transition: height .3s;
             overflow: hidden;
-            transition: .3s;
-            margin: 0 -15px;
         }
 
         .page-link {
