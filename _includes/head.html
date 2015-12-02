@@ -35,6 +35,10 @@ var _hmt = _hmt || [];
       loadWeather(local,''); //@params location, woeid
     });
     color();
+
+    $('header  nav .menu-icon').click(function(){
+      $(this).parent().toggleClass('active');
+    });
 });
 
 function loadWeather(location, woeid) {

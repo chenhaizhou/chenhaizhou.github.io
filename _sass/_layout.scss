@@ -61,54 +61,87 @@
     }
 
     @include media-query($on-palm) {
-        position: absolute;
-        top: 9px;
-        right: 20px;
+        float: none;
+        clear: both;
         background-color: $text-color;
         //border: 1px solid $grey-color-light;
-        border-radius: 5px;
         text-align: right;
         z-index: 999;
         text-shadow:none;
         .menu-icon {
             display: block;
-            float: right;
+            position: absolute;
+            top: 9px;
+            right: 20px;
             width: 36px;
-            height: 26px;
-            line-height: 26px;
-            padding: 5px 0;
+            height: 36px;
+            line-height: 36px;
             text-align: center;
-            color:#FFF;
-            font-size:1.4rem;
-            text-decoration: none;
-            font-weight:normal;
+            z-index: 2;
+            background-color: $text-color;
+            border-radius: 5px;
+            transition: transform .3s;
+            i {
+                display: inline-block;
+                width: 60%;
+                height: 2px;
+                vertical-align: middle;
+                background-color: #FFF;
+                position: relative;
+                &::before, &::after {
+                    content: "";
+                    display: inline-block;
+                    width: 100%;
+                    height: 2px;
+                    position: absolute;
+                    left: 50%;
+                    margin-left: -50%;
+                    z-index: 1;
+                    background-color: #FFF;
+                    transition: transform .3s;
+                }
+                &::before {
+                    top: -5px;
+                }
+                &::after {
+                    bottom: -5px;
+                }
+            }
+        }
+
+        &.active {
+            .menu-icon {
+                height: 48px;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+            i {
+                visibility: hidden;
+                &::before {
+                    visibility: visible;
+                    transform: rotate3d(0, 0, 1, 45deg);
+                    top: 0;
+                }
+                &::after {
+                    visibility: visible;
+                    transform: rotate3d(0, 0, 1, -45deg);
+                    bottom: 0;
+                }
+            }
+            .trigger {
+                height: auto;
+                background-color: inherit;
+                overflow: visible;
+                padding-bottom: 5px;
+            }
         }
 
         .trigger {
             clear: both;
-            display: block;
             height: 0;
             overflow: hidden;
-            transition: left .2s;
-            position: fixed;
-            top: 45px;
-            left: 100%;
-        }
-
-        &:hover {
-            border-bottom-left-radius: 0;
-            border-bottom-right-radius: 0;
-            .trigger {
-            //display: block;
-            height: auto;
-            width: 100%;
-            
-            left: 0;
-            right: 0;
-            background-color: inherit;
-            overflow: visible;
-            padding-bottom: 5px;
-        }
+            transition: .3s;
+            margin: 0 -15px;
         }
 
         .page-link {
@@ -875,6 +908,11 @@ h3 {
     }
     .post-list h2 {
         font-size: 1.2rem;
+    }
+    .m-list {
+        .tag-list2 {
+            padding-left: 0;
+        }
     }
 
 }
