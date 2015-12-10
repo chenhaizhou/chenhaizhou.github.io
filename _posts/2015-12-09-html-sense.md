@@ -20,7 +20,7 @@ Tim Berners-Lee（万维网发明者）最早提出了语义网（Semantic Web�
 
 随着互联网的发展，WEB也承载越来越多的信息（图片，声音，视频等），人们开始用机器来处理网络信息，就此诞生了搜索引擎。如次庞大及复杂的信息如何让搜索引擎处理和挖掘，所以让机器能够更好地读懂WEB上内容就变得越来越重要。
 
-> 传统的Web由文档组成，W3C希望通过一组技术支撑“数据的Web”，即Web of Data，将Web看作一个存储和管理数据的大型分布式数据库。语义Web是构造这样的数据Web的重要一环，帮助人们创建数据并存储在Web上，创建相关的词汇表及数据的处理规则。 —— W3C.org
+> 传统的Web由文档组成，W3C希望通过一组技术支撑“数据的Web”，即Web of Data，将Web看作一个存储和管理数据的大型分布式数据库。语义Web是构造这样的数据Web的重要一环，帮助人们创建数据并存储在Web上，创建相关的词汇表及数据的处理规则。 —— w3.org
 
 既然W3C有如此雄心为我们规划未来语义网，我们开发者作为W3C的坚定追随者还有什么理由不跟着大步迈进呢？
 
@@ -45,7 +45,7 @@ Tim Berners-Lee（万维网发明者）最早提出了语义网（Semantic Web�
  
 	在团队中大家都遵循同一个标准，可以减少很多差异化的东西，方便开发和维护，提高开发效率，甚至实现模块化开发。
 
-##怎样才算语义化
+##如何语义化
 
 ###语义化的HTML结构首先要强调HTML结构
 
@@ -87,5 +87,11 @@ HTML在页面中的作用就是结构和含义，通俗点说就是划分内容�
  
 - 每个input标签对应的说明文本都需要使用label标签，并且通过为input设置id属性，在lable标签中设置for=someld来让说明文本和相对应的input关联起来。
 
+##相关链接
+
+- [http://www.w3.org/TR/html5/](http://www.w3.org/TR/html5/)
+- [http://www.w3school.com.cn/semweb/](http://www.w3school.com.cn/semweb/)
+- [http://www.w3.org/standards/semanticweb/](http://www.w3.org/standards/semanticweb/)
+- [http://www.w3school.com.cn/html5/](http://www.w3school.com.cn/html5/)
 
 
