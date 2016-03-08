@@ -12,7 +12,7 @@ skype_username: chen.haizhou1
 pygments: true
 # Build settings
 markdown: kramdown
-paginate: 5
+paginate: 10
 tags_path : /tag.html
 timezone: China/Beijing
 
