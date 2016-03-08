@@ -13,7 +13,7 @@ CSS中主要的伪元素有四个：before/after/first-letter/first-line，在be
 
 <!--more-->
 
-##插入纯文字
+## 插入纯文字
 
 content:"插入的文章"，或者content:none不插入内容
 
@@ -39,7 +39,7 @@ h2::after{
 
 <iframe width="100%" height="300" src="//jsfiddle.net/dwqs/Lmm1r08x/embedded" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
-##嵌入文字符号
+## 嵌入文字符号
 
 可以使用content属性的open-quote属性值和close-quote属性值在字符串两边添加诸如括号、单引号、双引号之类的嵌套文字符号。open-quote用于添加开始的文字符号，close-quote用于添加结束的文字符号。
 
@@ -70,7 +70,7 @@ h2::after{
 
 <iframe width="100%" height="300" src="//jsfiddle.net/dwqs/p8e3qvv4/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
-##插入图片
+## 插入图片
 
 content属性也可以直接在元素前/后插入图片
 
@@ -90,7 +90,7 @@ h3::after{
 
 <iframe width="100%" height="300" src="//jsfiddle.net/dwqs/c6qk6pkv/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
-##插入元素的属性值
+## 插入元素的属性值
 
 content属性可以直接利用attr获取元素的属性，将其插入到对应位置。
 
@@ -110,7 +110,7 @@ a:after{
 
 <iframe width="100%" height="300" src="//jsfiddle.net/dwqs/m220nzan/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
-##插入项目编号
+## 插入项目编号
 
 利用content的counter属性针对多个项目追加连续编号.
 
@@ -140,7 +140,7 @@ h1{
 
 <iframe width="100%" height="300" src="//jsfiddle.net/dwqs/2ueLg3uj/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
-##项目编号修饰
+## 项目编号修饰
 
 默认插入的项目编号是数字型的，1,2,3.。。。自动递增，也能给项目编号追加文字和样式,依旧利用上面的html，css修改如下：
 
@@ -159,7 +159,7 @@ h1{
 
 <iframe width="100%" height="300" src="//jsfiddle.net/dwqs/17hqznca/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
-##指定编号种类
+## 指定编号种类
 
 利用content(计数器名，编号种类)格式的语法指定编号种类，编号种类的参考可以依据ul的list-style-type属性值。利用上述的html，css修改如下：
 
@@ -177,7 +177,7 @@ h1{
 预览：[https://jsfiddle.net/dwqs/4nsrtxup/](https://jsfiddle.net/dwqs/4nsrtxup/)
 <iframe width="100%" height="300" src="//jsfiddle.net/dwqs/4nsrtxup/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
-##编号嵌套
+## 编号嵌套
 
 大编号中嵌套中编号，中编号中嵌套小编号。
 

@@ -11,14 +11,14 @@ tags:
 <!--more-->
 （本文的例子用的是 SCSS 语法）
 
-##OOCSS
+## OOCSS
 
 OOCSS 不是什么新技术，只是一种撰写 CSS 的设计模式，或者可以说是一种「道德规范」，大致上我觉得重点只有两个：
 
  - 减少对 HTML 结构的依赖
  - 增加 CSS class 重复性的使用
 
-###减少对 HTML 结构的依赖
+### 减少对 HTML 结构的依赖
 
 {% highlight html%}	
 <nav class="nav--main">
@@ -36,7 +36,7 @@ OOCSS 不是什么新技术，只是一种撰写 CSS 的设计模式，或者可
 
 这样的写法，一来效能理论上比较好（我没办法验证），二来层次比较单纯。
 
-###增加 CSS class 的重复使用
+### 增加 CSS class 的重复使用
 
 在 OOCSS 的观念中，强调重复使用 class，而应该避免使用 id 作为 CSS 的选择器。这种想法就是像
 OOP
@@ -62,7 +62,7 @@ OOP
 
 先用 button 宣告此为一个按钮的样式，再用 button-default 或 button-primary 作为按钮底色的区别。这么做可以维护成本变得比较低，例如：想要改网站上所有按钮的大小，就只要修改 ```.button``` 的 padding 而已。
 
-##SMACSS
+## SMACSS
 
 我对 SMACSS 的理解还不是很深入，或许把 Scalable and Modular Architecture for CSS 看完后会有更深一曾的理解。目前对 SMACSS 的概念仅限于它对 CSS 不同的业务逻辑所做的划分方式：
 
@@ -76,7 +76,7 @@ OOP
 - Theme
 
 
-###Base
+### Base
 
 Base 就是设定标签元素的预设值，例如浏览器的 reset 可以写在这里，如果用的是 Compass，只要 ```@include global-reset``` 即可。这里只会对标签元素本身做设定，不会出现任何 class 或
 id，但是可以有属性选择器或是伪类：
@@ -87,7 +87,7 @@ input[type=text] {}
 a:hover {}
 {% endhighlight %}
 
-###Layuot
+### Layuot
 
 Layout 是指整个网站的「大架构」的外观，而非 ```.button``` 这种小元件的 class。网站通常会有一些主要的大区块，可能是 header 或 footer，Layout 就是用来定义这些「大架构」的 CSS。如果有做 Responsive Web Design 或是用 Grid System，也是把规则写在 Layout 这里。
 
@@ -104,7 +104,7 @@ Layout 是指整个网站的「大架构」的外观，而非 ```.button``` 这�
 
 通常只有一个选择器，一个 id、或一个 class。
 
-###Module
+### Module
 
 原本的 SMACSS 对 Module 的设计我觉得不是很好，所以我硬是将 Module
 拆分出一个 Partial。
@@ -114,7 +114,7 @@ Layout 是指整个网站的「大架构」的外观，而非 ```.button``` 这�
 
 模组不需要用任何的 prefix，因为 Module 就是设计来可以重复应用在不同的 page 上。
 
-###Partial
+### Partial
 
 Partial 跟 Latout 不同，也跟 Module 不同，他比 Layout 的范围小，可能是
 header 底下的某个子元素。他不像 Module，他是特定单一领域下特别的设定。
@@ -128,7 +128,7 @@ header 底下的某个子元素。他不像 Module，他是特定单一领域下
 通常会将 Partial 的名称加在子 class 作为 prefix，例如 .nav--main 底下的
 .nav--main_item。至于为什么要用这么奇怪的命名方式？这等等在 CSS 规范部分会说明介绍。
 
-###State
+### State
 
 State 负责定义元素不同的状态下，所呈现的样式。但是并非指一个元素的 ```:hover``` 或 ```:active``` 下的状态。举例来说，一个导航栏分页，目前所在页面的分页需要加上 .active
 的属性表示目前位置是在这个分页，HTML 会长这样：
@@ -156,17 +156,17 @@ State 负责定义元素不同的状态下，所呈现的样式。但是并非�
 
 有时候为了让阅读更贴近语义，会用比较友善的命名方式，以此段的范例来说，```.is-active``` 就比 ```.active``` 来得好读。
 
-###Theme
+### Theme
 
 Theme 是画面上所有「主视觉」的定义，例如 border-color、background-image 或是 font-family 等相关的 Typography 设定。为什么说是「主视觉」？因为有些元件模组仍然是留在 Module 去定义，Theme 就像 Layout 一样负责「大架构」上的视觉样式。
 
 编者注 感谢 Only1Word 指出，theme 在 SMACSS 中更类似皮肤。
 
-##CSS 规范
+## CSS 规范
 
 这里整理的是我觉得一定要知道的，其他还有很多规范可以转到文末的参考资源连结，那篇文章有介绍更多的细节。
 
-###BEM
+### BEM
 
 BEM 即 Block、Element、Modifier 的缩写，这是一种 class 的命名技巧。如果整个 project 只有自己一个人做，那当然是不太可能出现 class 重复的问题，但是如果同时多个 F2E 一起写同个部分的 CSS，就很容易出现共用 class 的问题，因此有了 BEM 这样的命名技巧。
 
@@ -185,7 +185,7 @@ BEM 即 Block、Element、Modifier 的缩写，这是一种 class 的命名技�
 }
 {% endhighlight %}
 
-###Javascript Hook
+### Javascript Hook
 
 透过 CSS class 来作为 Javascript 选取 DOM 节点的方式，就是 Javascript Hook。用 jQuery 可以常常看到这样的写法：```$('.nav--main a')```，可是当 CSS 跟 Javascript 搅在一起反而造成两边维护上的不便，当改了 CSS 时 Javascript 也要跟著改。
 
@@ -199,7 +199,7 @@ BEM 即 Block、Element、Modifier 的缩写，这是一种 class 的命名技�
 
 PS. HTML 里两个 class 之间用两个空格，会比一个空格看起来好阅读。
 
-##合理的选择器
+## 合理的选择器
 
 > class 无所谓是否语意化的问题；你应该关注它们是否合理，不要刻意强调 class名称要符合语意，而要注重使用的合理性与未来性。
 

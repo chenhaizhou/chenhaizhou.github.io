@@ -11,24 +11,24 @@ tags:
 最近几天在看jasmine的测试代码，里边有些mock的高级语法不太明白，网上搜了下，介绍的也比较少，很难得找到一篇，正好记录下来。以备学习。
 <!--more-->
 
-##核心概念
+## 核心概念
 
-###Suites
+### Suites
 
 
 ```describe (string, function)```一个测试组开始于全局函数describe，一个describe是一个it的集合。describe包含n个it，一个it包含n个判断断言。string：测试组名称，function：测试组函数。An expectation in Jasmine is an assertion that is either true or false. If you name them well, your specs read as full sentences in traditional BDD style.
 
-###Specs
+### Specs
 
 ```it(string, function)``` 一个测试Spec。string：测试名称，function：测试函数。 JavaScript scoping rules apply, so variables declared in a describe are available to any it block inside the suite.
 
-###Expectations
+### Expectations
 
 一个Expectation在jasmine中就是一个断言（expect语句），返回true或false。只有当一个spec中的expections全为ture时，这个spec显示通过，否则失败。
 
 Expectation带有实际值，它和表示匹配规则的方法链接在一起，Matcher方法带期望值。
 
-###Matchers
+### Matchers
 
 Matcher可以理解为断言，将Expectation传入的是实际值和Matcher传入的是期望值比较。任何Matcher都能通过在expect调用matcher前加上not来判断一个否定的断言。
 
@@ -53,7 +53,7 @@ describe("A suite is just a function", function() {
 });
 {% endhighlight %}
 
-###内置的Matcher
+### 内置的Matcher
 
 - **toBe** 相当于===，处理简单字面值和变量。
 - **toNotBe**
@@ -73,7 +73,7 @@ describe("A suite is just a function", function() {
 
 你也可以通过 custom_matcher.js 来自定义Matcher。
 
-###使用方法：
+### 使用方法：
 
 {% highlight js %}
 it("Some Rulers", function(){
@@ -110,9 +110,9 @@ it("toThrow检验一个函数是否会抛出一个错误", function() {
 });
 {% endhighlight %}
 
-##基本用法
+## 基本用法
 
-###Setup and Teardown
+### Setup and Teardown
 
 jasmine提供了全局的方法 beforeEach和afterEach，beforeEach在每个spec(it)前执行一次，afterEach在每个spec（it）后执行一次。
 
@@ -136,17 +136,17 @@ describe("A spec (with setup and tear-down)", function() {
 {% endhighlight %}
 
 
-###this
+### this
 
 除了在describe定义变量，用于各it共享数据外，还可以通过this关键字来共享数据。在在每一个Spec的声明周期（beforeEach->it->afterEach）的开始，都将有一个空对象this。
 
-###describe嵌套
+### describe嵌套
 
 describe是可以嵌套的，并且specs可以定义在任何一层的describe中，jasmine允许用树状的方法来组成一个suite。在一个spec执行之前，jasmine从树的根节点依次执行（先序遍历）各个beforeEach,spec执行之后再以同样的方式执行afterEach（后序遍历）。
 
 Demo请参考 [Nesting describe Blocks](http://jasmine.github.io/2.0/introduction.html#section-Nesting_&lt;code&gt;describe&lt;/code&gt;_Blocks).
 
-###禁用Suites
+### 禁用Suites
 
 suites和specs是可以设为无效的，只需要将describe和it写成xdescribe,这样在运行时它们是被忽略的，它们的结果不会出现在总的结果里。
 
@@ -156,7 +156,7 @@ xit("can be declared 'xit'", function() {
 });
 {% endhighlight %}
 
-###挂起Specs
+### 挂起Specs
 
 挂起的Specs不运行，但是该Specs的名字将出现在结果中，并将结果设置为Pending。任何使用xit标志的Spec或者没有function body将将被标志位pending。
 
@@ -169,9 +169,9 @@ it("can be declared by calling 'pending' in the spec body", function() {
   });
 {% endhighlight %}
 
-##高级用法
+## 高级用法
 
-###Spies
+### Spies
 
 在Jasmine中，我们使用Spi来跟踪函数被调用的情况，包括被方法调用的参数，Jasmine有专门的mather来跟这些Spi交互，如toHaveBeenCalled、toHaveBeenCalledWith等。
 
@@ -222,7 +222,7 @@ describe("A spy", function() {
 
 以下例子中，均使用类似的结构，但值给出关键代码，详情请参考官方文档。
 
-###Spies: and.callThrough
+### Spies: and.callThrough
 
 如果spi调用```and.callThrough```，那么spi除了跟踪所有的函数调用外，还会受实际实现的影响，即spi返回的值就是实际的值。
 
@@ -241,7 +241,7 @@ it("when called returns the requested value", function() {
 });
 {% endhighlight %}
 
-###Spies: and.returnValue
+### Spies: and.returnValue
 
 如果spi调用```and.returnValue```，那么该spi返回的值为在```and.returnValue```中返回的值。
 
@@ -261,7 +261,7 @@ it("when called returns the requested value", function() {
 });
 {% endhighlight %}
 
-###Spies: and.callFake
+### Spies: and.callFake
 
 和```and.returnValue```类似，只不过是用function的形式指定spi的返回值。
 
@@ -279,7 +279,7 @@ it("when called returns the requested value", function() {
 });
 {% endhighlight %}
 
-###Spies: and.throwError
+### Spies: and.throwError
 
 使用```and.throwError```来指定spi返回的异常。
 
@@ -292,7 +292,7 @@ it("throws the value", function() {
 });
 {% endhighlight %}
 
-###Spies: and.stub
+### Spies: and.stub
 
 在调用```and.callThrough```后，如果你想阻止spi继续对实际值产生影响，你可以调用```and.stub```。也就是说，```and.stub```是将spi对实际实现的影响还原到最终的状态——不影响实际值。
 
@@ -311,7 +311,7 @@ foo.setBar(123);
 expect(bar).toBe(null);
 {% endhighlight %}
 
-###calls
+### calls
 
 除了使用toHaveBeenCalled和toHaveBeenCalledWith来跟踪spi的调用情况外，我们还可以使用calls属性来跟踪更复杂的调用。
 
@@ -354,7 +354,7 @@ foo.setBar.calls.reset();
 expect(foo.setBar.calls.any()).toBe(false);
 {% endhighlight %}
 
-###Spies: createSpy
+### Spies: createSpy
 
 使用```jasmine.createSpy```来创建一个虚拟spi，除了没有任何实现，具有其他spi相同的功能。
 
@@ -364,7 +364,7 @@ whatAmI("I", "am", "a", "spy");
 expect(whatAmI.and.identity()).toEqual('whatAmI');
 {% endhighlight %}
 
-###Spies: createSpyObj
+### Spies: createSpyObj
 
 定义一个具有spi数组的对象。
 
@@ -377,7 +377,7 @@ tape.rewind(0);
 expect(tape.play).toHaveBeenCalled();
 {% endhighlight %}
 
-###jasmine.any
+### jasmine.any
 
 ```jasmine.any```的参数为一个构造函数或者“类”名，用于匹配所有构造函数为jasmine.any传入的构造函数的对象。
 
@@ -387,7 +387,7 @@ expect(12).toEqual(jasmine.any(Number));
 expect(foo).toHaveBeenCalledWith(jasmine.any(Number), jasmine.any(Function));
 {% endhighlight %}
 
-###jasmine.objectContaining
+### jasmine.objectContaining
 
 ```jasmine.objectContaining```接收一个Object类型的参数，用于匹配所有包含传入对象的所有对象。
 
@@ -406,11 +406,11 @@ expect(foo).not.toEqual(jasmine.objectContaining({
 }));
 {% endhighlight %}
 
-###虚拟Timer
+### 虚拟Timer
 
 Jasmine Clock 用于setTimeout和setInterval的回调控制，它使timer的回调函数同步化，一旦到达指定的时间，注册的毁掉函数便立即调用，这将是timer相关的代码更容易测试。也就是说，setTimeout和setInterval的回调是异步执行的，且时间是不精确的，使用 Jasmine Clock 可使它同步化，且精确计算时间。
 
-####安装：
+#### 安装：
 
 在Spec或者Suite中安装Jasmine Clock。
 
@@ -421,7 +421,7 @@ beforeEach(function() {
 });
 {% endhighlight %}
 
-####卸载：
+#### 卸载：
 
 保证使用完成后，切记要关闭Jasmine Clock。
 
@@ -431,7 +431,7 @@ afterEach(function() {
 });
 {% endhighlight %}
 
-####计时：
+#### 计时：
 
 使用```jasmine.clock().tick```来计时，一旦累计的时间达到setTimeout或者setInterval中指定的延时时间，则触发回调函数。
 
@@ -454,7 +454,7 @@ it("causes an interval to be called synchronously", function() {
 });
 {% endhighlight %}
 
-###异步支持
+### 异步支持
 
 beforeEach, it, 或者 afterEach添加一个可选参数（Function类型），我们假设该参数为done，当异步操作的回调，就调用done，表示异步操作的回调函数调用成功，否则如果没有调用done，则该Spec会因为超时退出，超时时间通过```jasmine.DEFAULT_TIMEOUT_INTERVAL```指定。
 

@@ -21,7 +21,7 @@ tags:
 
 >Tips:为了避免浏览器插件对分析过程产生影响，建议在隐身模式下进行分析。
 
-##Timeline工具栏介绍
+## Timeline工具栏介绍
 
 Timeline工具会详细检测出在Web应用加载的过程中时间花费情况的概览，包括下载资源、处理DOM事件、页面布局渲染、向屏幕绘制元素等。你可以通过分析Timeline得到的事件、框架和实时的内存用量，找出应用的性能问题。
 
@@ -33,7 +33,7 @@ Timeline同时提供了两种查看模式：“事件模式(Event Mode)”和“
 - 事件模式：显示重新渲染的各种事件花费的时间。
 - 帧模式：显示每一帧的时间花费情况。
 
-##事件模式 (Event Mode)
+## 事件模式 (Event Mode)
 
 如果我们的一个页面执行效率不高，我们必须要搞清楚导致页面性能低下的原因，到底是javascript执行出了问题，还是页面渲染出了问题。要了解这里面的执行细节，我们可以使用“事件模式”来进行分析。首先我们需要录制一些需要被分析的操作，录制结束后进入事件模式预览Timeline。下图是得到的事件模式的视图：
 ![timeline-2.png](/images/timeline-2.png)
@@ -57,7 +57,7 @@ Timeline同时提供了两种查看模式：“事件模式(Event Mode)”和“
 Record Detail视图区域的左侧是事件标题，右侧是对应的时间线。点击每一条时间标题可以看到更多信息，如事件发生在脚本的哪一行等。如果你只对某一个时间段内的某些操作感兴趣，可以通过移动时间轴的始末位置来选择要浏览的区域：
 ![timeline-6.png](/images/timeline-6.png)
 
-##帧模式 (Frame Mode)
+## 帧模式 (Frame Mode)
 
 帧模式从页面渲染性能的角度提供了数据支撑，一个柱状“frame”表示渲染过程中的一帧，也就是浏览器为了渲染单个内容块而必须要做的工作，包括：执行js，处理事件，修改DOM，更改样式和布局，绘制页面等。
 
@@ -82,13 +82,13 @@ Record Detail视图区域的左侧是事件标题，右侧是对应的时间线�
 - CPU Time: CPU耗时
 - Aggregated Time: 合计耗时分布
 
-##总结
+## 总结
 
 发现问题是解决问题的第一步，chrome浏览器的TimeLine工具可以很好地辅助我们分析页面的性能瓶颈，提供详细全面的分析数据，为我们进行性能优化提供数据依据。当然，TimeLine中有用的功能还有很多，比如Memery Mode, Screen Shot等，使用技巧多种多样，在这里主要介绍了如何去记录一段渲染过程，如何去使用Event Mode和Frame Mode去查看并分析得到性能指标，后续如果有新的体会和发现，还会再做记录~
 
-##TimeLine中的事件汇总
+## TimeLine中的事件汇总
 
-###Loading事件
+### Loading事件
 
 | 事件 |	描述 |
 |-----|-----|
@@ -98,7 +98,7 @@ Record Detail视图区域的左侧是事件标题，右侧是对应的时间线�
 | Receive Response | 响应头报文到达时触发 |
 | Send Request | 发送网络请求时触发 |
 
-###Scripting事件
+### Scripting事件
 
 |事件 |	描述|
 |---|---|
@@ -108,7 +108,7 @@ Record Detail视图区域的左侧是事件标题，右侧是对应的时间线�
 |DOMContentLoaded |	当页面中的DOM内容加载并解析完毕时触发 |
 |Evaluate Script |	A script was evaluated. |
 
-###Event 	js事件
+### Event 	js事件
 
 |事件 |	描述|
 |---|---|
@@ -122,7 +122,7 @@ Record Detail视图区域的左侧是事件标题，右侧是对应的时间线�
 | XHR Ready State Change |	当一个异步请求为就绪状态后触发 |
 | XHR Load |	当一个异步请求完成加载后触发 |
 
-###Rendering事件
+### Rendering事件
 
 |事件 |	描述|
 |---|---|
@@ -131,7 +131,7 @@ Record Detail视图区域的左侧是事件标题，右侧是对应的时间线�
 | Recalculate style |	Chrome重新计算元素样式时触发 |
 | Scroll | 内嵌的视窗滚动时触发 |
 
-###Painting事件
+### Painting事件
 
 |事件 |	描述 |
 |-----|-----|
@@ -140,7 +140,7 @@ Record Detail视图区域的左侧是事件标题，右侧是对应的时间线�
 |Image Resize |	一个图片被修改尺寸后触发 |
 |Paint |	合并后的层被绘制到对应显示区域后触发|
 
-##参考文档
+## 参考文档
 
 [https://developers.google.com/chrome-developer-tools/docs/timeline](https://developers.google.com/chrome-developer-tools/docs/timeline)
 
