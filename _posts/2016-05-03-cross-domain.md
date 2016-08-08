@@ -14,7 +14,7 @@ CORS是一个W3C标准，全称是"跨域资源共享"（Cross-origin resource s
 
 <!--more-->
 
-##一、简介
+## 一、简介
 
 CORS需要浏览器和服务器同时支持。目前，所有浏览器都支持该功能，IE浏览器不能低于IE10。
 
@@ -22,7 +22,7 @@ CORS需要浏览器和服务器同时支持。目前，所有浏览器都支持�
 
 因此，实现CORS通信的关键是服务器。只要服务器实现了CORS接口，就可以跨源通信。
 
-##二、两种请求
+## 二、两种请求
 
 浏览器将CORS请求分成两类：简单请求（simple request）和非简单请求（not-so-simple request）。
 
@@ -45,9 +45,9 @@ CORS需要浏览器和服务器同时支持。目前，所有浏览器都支持�
 
 浏览器对这两种请求的处理，是不一样的。
 
-##三、简单请求
+## 三、简单请求
 
-###3.1 基本流程
+### 3.1 基本流程
 
 对于简单请求，浏览器直接发出CORS请求。具体来说，就是在头信息之中，增加一个Origin字段。
 
@@ -91,7 +91,7 @@ Content-Type: text/html; charset=utf-8
 
    该字段可选。CORS请求时，XMLHttpRequest对象的getResponseHeader()方法只能拿到6个基本字段：Cache-Control、Content-Language、Content-Type、Expires、Last-Modified、Pragma。如果想拿到其他字段，就必须在Access-Control-Expose-Headers里面指定。上面的例子指定，```getResponseHeader('FooBar')```可以返回FooBar字段的值。
 
-###3.2 withCredentials 属性
+### 3.2 withCredentials 属性
 
 上面说到，CORS请求默认不发送Cookie和HTTP认证信息。如果要把Cookie发到服务器，一方面要服务器同意，指定Access-Control-Allow-Credentials字段。
 
@@ -119,9 +119,9 @@ xhr.withCredentials = false;
 
 需要注意的是，如果要发送Cookie，Access-Control-Allow-Origin就不能设为星号，必须指定明确的、与请求网页一致的域名。同时，Cookie依然遵循同源政策，只有用服务器域名设置的Cookie才会上传，其他域名的Cookie并不会上传，且（跨源）原网页代码中的document.cookie也无法读取服务器域名下的Cookie。
 
-##四、非简单请求
+## 四、非简单请求
 
-###4.1 预检请求
+### 4.1 预检请求
 
 非简单请求是那种对服务器有特殊要求的请求，比如请求方法是PUT或DELETE，或者Content-Type字段的类型是application/json。
 
@@ -229,7 +229,7 @@ Access-Control-Max-Age: 1728000
 
    该字段可选，用来指定本次预检请求的有效期，单位为秒。上面结果中，有效期是20天（1728000秒），即允许缓存该条回应1728000秒（即20天），在此期间，不用发出另一条预检请求。
 
-###4.3 浏览器的正常请求和回应
+### 4.3 浏览器的正常请求和回应
 
 一旦服务器通过了"预检"请求，以后每次浏览器正常的CORS请求，就都跟简单请求一样，会有一个Origin头信息字段。服务器的回应，也都会有一个Access-Control-Allow-Origin头信息字段。
 
@@ -256,7 +256,7 @@ Content-Type: text/html; charset=utf-8
 
 上面头信息中，Access-Control-Allow-Origin字段是每次回应都必定包含的。
 
-##五、与JSONP的比较
+## 五、与JSONP的比较
 
 CORS与JSONP的使用目的相同，但是比JSONP更强大。
 
