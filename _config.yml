@@ -9,7 +9,8 @@ github_username:  chenhaizhou
 facebook_usrname: 
 qq: 309973094
 skype_username: chen.haizhou1
-pygments: true
+#pygments: true
+highlighter: pygments
 # Build settings
 markdown: kramdown
 paginate: 10
