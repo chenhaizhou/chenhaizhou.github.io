@@ -10,7 +10,7 @@ facebook_usrname:
 qq: 309973094
 skype_username: chen.haizhou1
 #pygments: true
-highlighter: rouge
+#highlighter: rouge
 # Build settings
 markdown: kramdown
 paginate: 10
