@@ -13,6 +13,7 @@ skype_username: chen.haizhou1
 #highlighter: rouge
 # Build settings
 markdown: kramdown
+gems: [jekyll-paginate]
 paginate: 10
 tags_path : /tag.html
 timezone: China/Beijing
